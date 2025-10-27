@@ -4,9 +4,8 @@ from app.models.patient import Patient
 from app.schemas.patient import PatientCreate, PatientResponse
 from app.core.database import get_db
 
-pa = APIRouter()
-@pa.get()
-@pa.get("/patients", response_model=list[PatientResponse])
+pa= APIRouter()
+@pa.get("/patients/", response_model=list[PatientResponse])
 def get_patients(db: Session = Depends(get_db)):
     patients = db.query(Patient).all()
     return patients 
@@ -19,7 +18,4 @@ def create_patient(patient: PatientCreate, db: Session = Depends(get_db)):
     return new_patient
 
 
-@pa.get("/patients{id}", response_model=list[PatientResponse])
-def get_patients(db: Session = Depends(get_db)):
-    patients = db.query(Patient).all()
-    return patients
+
