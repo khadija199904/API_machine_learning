@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 
-class PatientBase(BaseModel):
+# Schema to create a patient
+class PatientCreate(BaseModel):
     age: int
     gender: int
     pressurehight: float
@@ -8,14 +9,21 @@ class PatientBase(BaseModel):
     glucose: float
     kcm: float
     troponin: float
-    impluse: int
+    impluse: float
     status: str
 
-class PatientCreate(PatientBase):
-    pass
-
-class PatientShow(PatientBase):
+# Schema to return patient info
+class PatientResponse(BaseModel):
     id: int
+    age: int
+    gender: int
+    pressurehight: float
+    pressurelow: float
+    glucose: float
+    kcm: float
+    troponin: float
+    impluse: float
+    status: str
 
     class Config:
         from_attributes = True
