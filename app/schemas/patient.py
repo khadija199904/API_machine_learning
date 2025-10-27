@@ -1,17 +1,21 @@
 from pydantic import BaseModel
 
 class PatientBase(BaseModel):
-    name: str
     age: int
-    gender: str
-    cholesterol: float
-    blood_pressure: float
+    gender: int
+    pressurehight: float
+    pressurelow: float
+    glucose: float
+    kcm: float
+    troponin: float
+    impluse: int
+    status: str
 
 class PatientCreate(PatientBase):
     pass
 
-class PatientResponse(PatientBase):
+class PatientShow(PatientBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
