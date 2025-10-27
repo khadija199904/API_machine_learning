@@ -1,5 +1,4 @@
-#  Heart Disease Classification Dataset
-
+#  Classification des Maladies Cardiaques
 ## 📘 Description générale
 
 Ce jeu de données contient des **informations cliniques et biologiques** collectées auprès de patients afin de **déterminer le risque ou la présence d’une maladie cardiaque**.
