@@ -3,7 +3,7 @@
 
 Ce jeu de données contient des **informations cliniques et biologiques** collectées auprès de patients afin de **déterminer le risque ou la présence d’une maladie cardiaque**.
 
-Il est conçu pour des tâches de **classification supervisée** (positive = sain, negative = malade), et peut être utilisé pour entraîner, valider et comparer différents modèles de machine learning ou deep learning (Random Forest, Logistic Regression, Xgboost...).
+Il est conçu pour des tâches de **classification supervisée** (positive = sain, negative = malade), et peut être utilisé pour entraîner, valider et comparer différents modèles de machine learning ou deep learning (Random Forest,SVC, Logistic Regression, Xgboost...).
 
 ---
 

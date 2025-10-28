@@ -8,6 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix ,f1_score, r
 from xgboost import XGBClassifier
 from Functions import Charge_data, clean_data, Encode_df, split_data
 
+
 import joblib
 
 
@@ -30,7 +31,7 @@ preprocessor = ColumnTransformer(transformers=[
     )  
 # les modèles
 models = {
-'RandomForest': RandomForestClassifier(random_state=42),
+'RandomForest': RandomForestClassifier(class_weight='balanced',random_state=42),
 'XGBoost': XGBClassifier(random_state=42)
 }
 # --- Entraînement et évaluation pour chaque modèle ---
@@ -63,9 +64,3 @@ print(f"\n Meilleur modèle : {best_name} avec F1 = {best_score:.3f}")
 joblib.dump(best_model, f"best_pipeline_{best_name}.pkl")
 print(f"Modele sauvegardé '")
 
-# Charger le modèle sauvegardé
-
-model_loaded = joblib.load("best_pipeline_XGBoost.pkl")
-
-# Tester sur de nouvelles données
-y_pred_test = model_loaded.predict(X_test)
