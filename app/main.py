@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api import patients
+from app.api import patients, predict
 from app.core.database import Base, engine
 
 # Create all tables
@@ -12,8 +12,8 @@ app = FastAPI(
 )
 
 # Include patient routes
-app.include_router(patients.router, prefix="/api", tags=["Patients"])
-
+app.include_router(patients.router, prefix="/api/patients", tags=["Patients"])
+app.include_router(predict.router, prefix="/api", tags=["Prediction"])
 @app.get("/")
 def root():
     return {"message": "Cardio Risk API is running!"}
