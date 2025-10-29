@@ -9,7 +9,7 @@ from pathlib import Path
 
 router = APIRouter()
 
-MODEL_FILE = Path("app/models/best_pipeline_RandomForest.pkl")
+MODEL_FILE = Path("app/models/best_pipeline_XGBoost.pkl")
 
 try:
     model = joblib.load(MODEL_FILE)

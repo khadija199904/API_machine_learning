@@ -1,8 +1,5 @@
 from pydantic import BaseModel
-# import joblib
 
-# Load the pre-trained model when the application starts
-# model = joblib.load('best_pipeline_XGBoost.pkl')
 class PatientBase(BaseModel):
     age: int
     gender: int

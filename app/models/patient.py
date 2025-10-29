@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, Float, String
-from  app.core.database import  Base
+from app.core.database import Base
+
 class Patient(Base):
     __tablename__ = "patients"
 
@@ -11,5 +12,5 @@ class Patient(Base):
     glucose = Column(Float)
     kcm = Column(Float)
     troponin = Column(Float)
-    impluse = Column(Integer)
-    status = Column(Integer)  # "positive" ou "negative"
+    impluse = Column(Float)  # Changed from Integer to Float to match schema
+    status = Column(Integer, nullable=True)  # 0 = negative, 1 = positive
