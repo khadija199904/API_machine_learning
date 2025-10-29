@@ -88,7 +88,7 @@ for name, model in models.items():
     # Sauvegarder le meilleur modèle selon F1
     if F1 > best_score:
         best_score = F1
-        best_model = clf
+        best_model = grid_search
         best_name = name
 
 
