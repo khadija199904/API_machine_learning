@@ -9,40 +9,37 @@ from pathlib import Path
 
 router = APIRouter()
 
-# Path to your model file
-MODEL_PATH = Path("app/models/best_pipeline_XGBoost.pkl")
+MODEL_FILE = Path("app/models/best_pipeline_RandomForest.pkl")
 
-# Load model safely
 try:
-    model = joblib.load(MODEL_PATH)
-    print(f"Model loaded successfully from {MODEL_PATH}")
+    model = joblib.load(MODEL_FILE)
+    print(f"Model loaded: {MODEL_FILE}")
 except Exception as e:
     model = None
-    print(f"Could not load model: {e}")
+    print(f"Error loading model: {e}")
 
-# Prediction route
-@router.post("/predict_risk", response_model=PatientResponse)
-def predict_risk(patient: PatientCreate, db: Session = Depends(get_db)):
-    """
-    Predicts the patient's cardiovascular risk using the trained ML model,
-    saves it in the database, and returns the full patient record.
-    """
+# -------------------------------
+#  Prediction endpoint
+# -------------------------------
+@router.post("/predict", response_model=PatientResponse)
+def predict(patient: PatientCreate, db: Session = Depends(get_db)):
+    """Predict cardiovascular risk and save the result in database."""
     if model is None:
-        raise HTTPException(status_code=500, detail="Model not loaded on server")
+        raise HTTPException(status_code=500, detail="Model not loaded")
 
-    # Convert to DataFrame for the model
-    data = pd.DataFrame([patient.dict()])
+    # Convert input to DataFrame
+    df = pd.DataFrame([patient.dict()])
 
-    #  Make prediction
+    # Make prediction
     try:
-        prediction = model.predict(data)[0]
+        prediction = int(model.predict(df)[0])
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Prediction failed: {e}")
 
-    # Save to DB
-    db_patient = Patient(**patient.dict(), status=int(prediction))
-    db.add(db_patient)
+    # Save prediction to DB
+    new_patient = Patient(**patient.dict(), status=prediction)
+    db.add(new_patient)
     db.commit()
-    db.refresh(db_patient)
+    db.refresh(new_patient)
 
-    return db_patient
+    return new_patient

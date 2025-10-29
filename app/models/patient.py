@@ -12,4 +12,4 @@ class Patient(Base):
     kcm = Column(Float)
     troponin = Column(Float)
     impluse = Column(Integer)
-    status = Column(String)  # "positive" ou "negative"
+    status = Column(Integer)  # "positive" ou "negative"
