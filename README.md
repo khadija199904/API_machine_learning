@@ -52,7 +52,7 @@ Le jeu de données contient des informations cliniques et biologiques permettant
 ├── requirements.txt                      # Dépendances du featureML
 └── README.md                             # Ce fichier
 ```
-### Résultats 
+### Résultats de l'evaluation 
  1 - Pipeline 
 
 | Modèle | Accuracy | F1-Score |
