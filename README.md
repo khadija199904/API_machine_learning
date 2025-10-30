@@ -25,27 +25,27 @@ Le jeu de données contient des informations cliniques et biologiques permettant
 
 ---
 
-## Étapes du projet
+## Étapes du partie machine learning 
 - Exploration et analyse des données (EDA)
 - Prétraitement et pipeline d'entraînement avec Scikit-learn
 - Comparaison de plusieurs modèles : Random Forest et XGBoost
 - Optimisation des hyperparamètres avec GridSearchCV
 - Sauvegarde du meilleur modèle entraîné
 
-## Structure du projet
+## Structure du featureML
 ```bash
  API_machine_learning
 │
 ├── data/
-│   └── cardiovascular.csv                # Jeu de données d’entrée
+│   └── cardiovascular.csv                # Notre dataset
 │
 ├── pipeline.py                           # Pipeline  (RandomForest & XGBoost)
 ├── pipeline_with_gridsearch.py           # Pipeline avec GridSearchCV
 │
 ├── best_pipeline_XGBoost.pkl               # Meilleur modèle sauvegardé
-├── best_pipeline_with_GS_RandomForest.pkl
+├── best_pipeline_with_GS_RandomForest.pkl   # Meilleur modèle avec gridsearch sauvegardé 
 │
-├── requirements.txt                      # Dépendances du projet
+├── requirements.txt                      # Dépendances du featureML
 └── README.md                             # Ce fichier
 ```
 ### Résultats du pipeline 
