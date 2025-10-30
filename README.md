@@ -33,20 +33,21 @@ Le jeu de données contient des informations cliniques et biologiques permettant
 - Sauvegarde du meilleur modèle entraîné
 
 ## Structure du projet
-📂 Cardiovascular_Prediction
+```bash
+ API_machine_learning
 │
 ├── data/
 │   └── cardiovascular.csv                # Jeu de données d’entrée
 │
-├── pipeline.py                           # Pipeline de base (RandomForest & XGBoost)
+├── pipeline.py                           # Pipeline  (RandomForest & XGBoost)
 ├── pipeline_with_gridsearch.py           # Pipeline avec GridSearchCV
 │
 ├── best_pipeline_XGBoost.pkl               # Meilleur modèle sauvegardé
-├──  
+├── best_pipeline_with_GS_RandomForest.pkl
 │
 ├── requirements.txt                      # Dépendances du projet
 └── README.md                             # Ce fichier
-
+```
 ### Résultats du pipeline 
  1 - Pipeline 
 
