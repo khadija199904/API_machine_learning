@@ -37,7 +37,11 @@ Le jeu de données contient des informations cliniques et biologiques permettant
  API_machine_learning
 │
 ├── data/
-│   └── cardiovascular.csv                # Notre dataset
+│   └──     Cardiovasculaires_Data.csv                # Notre dataset
+│
+├── EDA.py                                # Analyse exploratoire des données (EDA)
+│
+├── Functions.py                          # Fonctions de prétraitement des données
 │
 ├── pipeline.py                           # Pipeline  (RandomForest & XGBoost)
 ├── pipeline_with_gridsearch.py           # Pipeline avec GridSearchCV
@@ -48,7 +52,7 @@ Le jeu de données contient des informations cliniques et biologiques permettant
 ├── requirements.txt                      # Dépendances du featureML
 └── README.md                             # Ce fichier
 ```
-### Résultats du pipeline 
+### Résultats 
  1 - Pipeline 
 
 | Modèle | Accuracy | F1-Score |
