@@ -36,8 +36,6 @@ main/
 │
 ├─ ML/         # Partie Machine Learning
 │
-├─ ML/         # Partie Machine Learning
-│
 └─ requirements.txt
 ```
 <<<<<<< HEAD
