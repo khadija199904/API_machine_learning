@@ -5,8 +5,8 @@
 Ce projet vise à développer une **API Complète** permettant de **prédire le risque cardiovasculaire** à partir de données médicales.  
 
 L’API expose un endpoint `/predict_risk` qui reçoit des informations patient (âge, tension, cholestérol, etc.) et renvoie **une prédiction binaire** :  
-- `1` : positif (risque cardiovasculaire) 
-- `0` : négatif (pas de risque)   
+- `1` : positive (risque cardiovasculaire) 
+- `0` : négative (pas de risque)   
  
 Le projet est structuré en deux parties dans la branche **main** :
 - `app/` : contient le backend FastAPI, gestion des endpoints et de la documentation Swagger interactive.
@@ -53,7 +53,7 @@ uvicorn app.main:app --reload
  - API : http://127.0.0.1:8000
 
  - Swagger UI : http://127.0.0.1:8000/docs
- 
+
 ## Exemple de requête /predict_risk
   
 #### `POST /api/predict`
@@ -94,8 +94,8 @@ uvicorn app.main:app --reload
 
 ## Auteurs
 
-**Khadija Elabbioui**
-**Ismail El Ghazi**
+- **Khadija Elabbioui**
+- **Ismail El Ghazi**
 
 
 =======
