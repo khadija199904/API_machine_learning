@@ -19,7 +19,7 @@ git checkout main
 2. **Créer un environnement virtuel**
 ```bash
 python -m venv venv
-venv\Scripts\activate     # Windows
+venv\Scripts\activate     
 ```
 3. **Installer les dépendances**
 ```bash
