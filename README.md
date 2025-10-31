@@ -39,21 +39,19 @@ main/
 │
 └─ requirements.txt
 ```
-<<<<<<< HEAD
 ### Commandes d’exécution
 Pour lancer l’API FastAPI :
 ``` bash
 uvicorn app.main:app --reload
 ```
+
  - API : http://127.0.0.1:8000
 
  - Swagger UI : http://127.0.0.1:8000/docs
 
-<<<<<<< HEAD
-API 
+
 =======
 README API 
->>>>>>> 352b4d29fe08150a7311123de41d4355a4ba24a9
 =======
 # Cardio Risk API
 
