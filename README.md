@@ -1,3 +1,44 @@
+# Projet : Prédiction du Risque Cardiovasculaire
+
+## Objectif du projet
+Ce projet a pour objectif de créer une API REST pour prédire le risque cardiovasculaire à partir de données médicales.  
+Le projet est structuré en deux parties dans la branche **main** :
+- `app/` : contient le backend FastAPI, gestion des endpoints et de la documentation Swagger interactive.
+- `ML/` : contient la partie Machine Learning, incluant le modèle de prédiction, le prétraitement des données et les fonctions de prédiction.
+
+---
+
+## Installation
+
+1. **Cloner le dépôt et se placer sur la branche main**
+```bash
+git clone https://github.com/khadija199904/API_machine_learning
+cd API_machine_learning
+git checkout main
+```
+2. **Créer un environnement virtuel**
+```bash
+python -m venv venv
+venv\Scripts\activate     # Windows
+```
+3. **Installer les dépendances**
+```bash
+pip install -r requirements.txt
+```
+
+## Structure du projet
+main/
+│
+├─ .github/              # GitHub Actions / Workflows
+│
+├─ app/        # Backend FastAPI
+│
+├─ ML/         # Partie Machine Learning
+│
+├─ ML/         # Partie Machine Learning
+│
+└─ requirements.txt
+
 <<<<<<< HEAD
 API 
 =======
