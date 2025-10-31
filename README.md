@@ -2,7 +2,12 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green?logo=fastapi)
 ## Objectif du projet
-Ce projet a pour objectif de créer une API complète pour prédire le risque cardiovasculaire à partir de données médicales.  
+Ce projet vise à développer une **API Complète** permettant de **prédire le risque cardiovasculaire** à partir de données médicales.  
+
+L’API expose un endpoint `/predict_risk` qui reçoit des informations patient (âge, tension, cholestérol, etc.) et renvoie **une prédiction binaire** :  
+- `1` : positif (risque cardiovasculaire) 
+- `0` : négatif (pas de risque)   
+ 
 Le projet est structuré en deux parties dans la branche **main** :
 - `app/` : contient le backend FastAPI, gestion des endpoints et de la documentation Swagger interactive.
 - `ML/` : contient la partie Machine Learning, incluant le modèle de prédiction, le prétraitement des données et les fonctions de prédiction.
@@ -31,7 +36,7 @@ pip install -r requirements.txt
 ``` bash
 main/
 │
-├─ .github/              # GitHub Actions / Workflows
+├─ .github/Workflows              # GitHub Actions / Workflows ,tests automatiques
 │
 ├─ app/        # Backend FastAPI
 │
@@ -48,6 +53,49 @@ uvicorn app.main:app --reload
  - API : http://127.0.0.1:8000
 
  - Swagger UI : http://127.0.0.1:8000/docs
+ 
+## Exemple de requête /predict_risk
+  
+#### `POST /api/predict`
+
+**Exemple de corps de requête :**
+```json
+{
+  "age": 45,
+  "gender": 1,
+  "pressurehight": 140.5,
+  "pressurelow": 90.0,
+  "glucose": 105.5,
+  "kcm": 2.5,
+  "troponin": 0.05,
+  "impluse": 75.0
+}
+```
+
+**Reponse : **
+```json
+{
+  "id": 1,
+  "age": 45,
+  "gender": 1,
+  "pressurehight": 140.5,
+  "pressurelow": 90.0,
+  "glucose": 105.5,
+  "kcm": 2.5,
+  "troponin": 0.05,
+  "impluse": 75.0,
+  "status": 1
+}
+```
+
+**Explication :**
+- `0`: le patient ne présente pas de risque (negative)
+- `1`: le patient présente un risque cardiovasculaire (positive)
+
+## Auteurs
+
+**Khadija Elabbioui**
+**Ismail El Ghazi**
 
 
 =======
