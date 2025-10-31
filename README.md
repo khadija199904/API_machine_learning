@@ -27,6 +27,7 @@ pip install -r requirements.txt
 ```
 
 ## Structure du projet
+``` bash
 main/
 │
 ├─ .github/              # GitHub Actions / Workflows
@@ -38,7 +39,7 @@ main/
 ├─ ML/         # Partie Machine Learning
 │
 └─ requirements.txt
-
+```
 <<<<<<< HEAD
 API 
 =======
