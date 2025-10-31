@@ -4,8 +4,8 @@
 Ce projet vise à prédire le risque de maladie cardiovasculaire à partir de données cliniques et biologiques collectées auprès de patients.
 L’objectif est de construire, comparer et optimiser différents modèles de Machine Learning (Random Forest, XGBoost, etc.) pour classifier les patients en deux catégories :
 
-- positive = sain
-- negative = malade
+- positive = risque cardiovasculaire
+- negative = pas de risque
 ---
 
 ## Structure du dataset
@@ -21,7 +21,7 @@ Le jeu de données contient des informations cliniques et biologiques permettant
 | **kcm** | CK-MB (enzyme cardiaque) | Numérique | Indicateur de lésions du muscle cardiaque |
 | **troponin** | Troponine (protéine cardiaque) | Numérique | Marqueur clé d’infarctus du myocarde |
 | **impluse** | Fréquence cardiaque | Numérique | Indique l’activité et l’état cardiaque général |
-| **status** | Cible (positive = sain, negative = malade) | Catégorique | Variable à prédire |
+| **status** | Cible (positive = risque cardiovasculaire, negative = pas de risque) | Catégorique | Variable à prédire |
 
 ---
 
