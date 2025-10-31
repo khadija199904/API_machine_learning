@@ -16,7 +16,7 @@ import joblib
 
 
 #  Charger et préparer les données 
-df = Charge_data(r"C:\Users\khadija\Desktop\API_machine_learning-1\Cardiovasculaires_Data.csv")
+df = Charge_data("Cardiovasculaires_Data.csv")
 df = clean_data(df)
 df = Encode_df(df, col='status')
 X_train, X_test, y_train, y_test = split_data(df, 'status')
