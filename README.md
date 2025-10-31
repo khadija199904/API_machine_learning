@@ -72,7 +72,7 @@ uvicorn app.main:app --reload
 }
 ```
 
-**Reponse : **
+**Reponse :**
 ```json
 {
   "id": 1,
