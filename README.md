@@ -39,6 +39,7 @@ main/
 │
 └─ requirements.txt
 ```
+<<<<<<< HEAD
 ### Commandes d’exécution
 Pour lancer l’API FastAPI :
 ``` bash
@@ -50,6 +51,9 @@ uvicorn app.main:app --reload
 
 <<<<<<< HEAD
 API 
+=======
+README API 
+>>>>>>> 352b4d29fe08150a7311123de41d4355a4ba24a9
 =======
 # Cardio Risk API
 
