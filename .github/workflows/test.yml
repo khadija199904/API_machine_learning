@@ -30,7 +30,6 @@ jobs:
       env:
         PYTHONPATH: ${{ github.workspace }}
       run: |
-<<<<<<< HEAD
         pytest app/tests/test_api.py -v -k "not predict"
 
     - name: Tests completed
@@ -40,8 +39,3 @@ jobs:
     - name: Tests failed
       if: failure()
       run: echo " Some tests failed. Please check the logs above."
-=======
-        pytest -s test.py
-
-   
->>>>>>> feature/ML
