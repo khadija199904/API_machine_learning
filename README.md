@@ -39,6 +39,15 @@ main/
 │
 └─ requirements.txt
 ```
+### Commandes d’exécution
+Pour lancer l’API FastAPI :
+``` bash
+uvicorn app.main:app --reload
+```
+ - API : http://127.0.0.1:8000
+
+ - Swagger UI : http://127.0.0.1:8000/docs
+
 <<<<<<< HEAD
 API 
 =======
