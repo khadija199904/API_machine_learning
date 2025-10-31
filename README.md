@@ -1,7 +1,7 @@
 # Projet : Prédiction du Risque Cardiovasculaire
 
 ## Objectif du projet
-Ce projet a pour objectif de créer une API REST pour prédire le risque cardiovasculaire à partir de données médicales.  
+Ce projet a pour objectif de créer une API complète pour prédire le risque cardiovasculaire à partir de données médicales.  
 Le projet est structuré en deux parties dans la branche **main** :
 - `app/` : contient le backend FastAPI, gestion des endpoints et de la documentation Swagger interactive.
 - `ML/` : contient la partie Machine Learning, incluant le modèle de prédiction, le prétraitement des données et les fonctions de prédiction.
