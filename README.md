@@ -1,5 +1,6 @@
 # Projet : Prédiction du Risque Cardiovasculaire
-
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green?logo=fastapi)
 ## Objectif du projet
 Ce projet a pour objectif de créer une API complète pour prédire le risque cardiovasculaire à partir de données médicales.  
 Le projet est structuré en deux parties dans la branche **main** :
