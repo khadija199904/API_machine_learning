@@ -39,8 +39,7 @@ main/
 │
 └─ requirements.txt
 ```
-<<<<<<< HEAD
-API 
+README API 
 =======
 # Cardio Risk API
 
